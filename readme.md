@@ -1,4 +1,4 @@
-# Real-Time Patient Vitals Monitoring Pipeline
+# Patient Vitals Monitoring Pipeline
 
 An end-to-end streaming data engineering pipeline that monitors simulated patient vitals (heart rate, blood pressure, oxygen levels, and temperature) in real-time. Built entirely on **Google Cloud Platform (GCP)** using the **Medallion Architecture**, with fully automated data ingestion, multi-stage transformation, and live visualization.
 
