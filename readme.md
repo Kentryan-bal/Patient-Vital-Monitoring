@@ -214,9 +214,8 @@ python dataflow/streaming_medallion_pipeline.py \
 
 ## Dashboard
 
-The **Power BI** dashboard (connected via DirectQuery to BigQuery) provides real-time monitoring:
+The **Looker** dashboard provides real-time monitoring:
 
 - Average Heart Rate, SPO2, and Temperature per patient.
-- A **Slicer** to filter by specific Patient IDs.
-- Dynamic risk indicators that change color based on the latest risk level (e.g., red for High Risk).
+- A **Drop-down list** to filter by specific Patient IDs.
 
