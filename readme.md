@@ -1,4 +1,4 @@
-# Real-Time Patient Vitals Monitoring Pipeline
+# Patient Vitals Monitoring Pipeline
 
 An end-to-end streaming data engineering pipeline that monitors simulated patient vitals (heart rate, blood pressure, oxygen levels, and temperature) in real-time. Built entirely on **Google Cloud Platform (GCP)** using the **Medallion Architecture**, with fully automated data ingestion, multi-stage transformation, and live visualization.
 
@@ -24,7 +24,7 @@ The pipeline implements a **Medallion Architecture** to enforce strict data line
 | **Google Cloud Dataflow** | Serverless execution engine for the Apache Beam pipeline; handles auto-scaling and windowing. |
 | **Google Cloud Storage (GCS)** | Warm/cold storage for Bronze and Silver layers, plus Dataflow staging and temp files. |
 | **Google BigQuery** | Data warehouse for the Gold layer; stores risk analytics for real-time querying. |
-| **Power BI** | Dashboard connected via DirectQuery for live monitoring and visualization. |
+| **Looker** | Dashboard connected via BiqQuery for live monitoring and visualization. |
 
 ---
 
@@ -34,7 +34,7 @@ The pipeline implements a **Medallion Architecture** to enforce strict data line
 - **Stream Processing:** Apache Beam (executed on Cloud Dataflow)
 - **Messaging:** Google Cloud Pub/Sub
 - **Storage:** Google Cloud Storage, BigQuery
-- **Visualization:** Power BI (DirectQuery)
+- **Visualization:** Looker (BiqQuery)
 - **Version Control:** GitHub
 
 ---
@@ -213,10 +213,12 @@ python dataflow/streaming_medallion_pipeline.py \
 ---
 
 ## Dashboard
+![alt text](<patient vital monitoring dashboard.png>)
 
-The **Power BI** dashboard (connected via DirectQuery to BigQuery) provides real-time monitoring:
+[View Looker Studio Report](https://lookerstudio.google.com/reporting/e00ae17e-d63c-4c85-a895-a735ee11e15f)
+
+The **Looker** dashboard provides real-time monitoring:
 
 - Average Heart Rate, SPO2, and Temperature per patient.
-- A **Slicer** to filter by specific Patient IDs.
-- Dynamic risk indicators that change color based on the latest risk level (e.g., red for High Risk).
+- A **Drop-down list** to filter by specific Patient IDs.
 
