@@ -212,12 +212,12 @@ python dataflow/streaming_medallion_pipeline.py \
 
 ---
 
-## Dashboard
+## Looker Dashboard
 ![alt text](<patient vital monitoring dashboard.png>)
 
 [View Looker Studio Report](https://lookerstudio.google.com/reporting/e00ae17e-d63c-4c85-a895-a735ee11e15f)
 
-The **Power BI** dashboard (connected via DirectQuery to BigQuery) provides real-time monitoring:
+The **Looker** dashboard provides real-time monitoring:
 
 - Average Heart Rate, SPO2, and Temperature per patient.
 - A **Drop-down list** to filter by specific Patient IDs.
